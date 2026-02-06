@@ -73,3 +73,32 @@ console.log(myAccount.checkBalance());
 myAccount.withdraw(150); 
 console.log(myAccount.checkBalance());
 
+// the secure voting system
+
+function createVotingSystem(candidateName) {
+    let votes = 0;
+    return {
+        castVote(passcode) {
+            if (passcode === "secretPasscode") {
+                votes += 1;
+                return "Vote cast successfully!";
+            } else {
+                throw new Error("Unauthorized: Invalid passcode");
+            }
+        },
+        getResults() {
+            return `${candidateName} has ${votes} votes.`;
+        }
+    }
+}
+
+const votingSystem = createVotingSystem("Alice");
+try {
+    console.log(votingSystem.castVote("secretPasscode"));
+    console.log(votingSystem.castVote("wrongPasscode"))
+} catch (error) {
+    console.error(error.message);
+}
+
+console.log(votingSystem.getResults());
+console.log(votingSystem.votes);
