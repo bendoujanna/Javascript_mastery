@@ -68,3 +68,16 @@ processor.addValue(30);
 
 console.log(processor.getProcessedData());
 console.log(processor.data);
+
+
+// challenge 2: the sparse error handler 
+
+const files = ["doc1", "doc2", "doc3"]; 
+files[5] = "doc4";
+
+function validateFiles(fileArray) {
+    fileArray.keys() {
+        
+    }
+
+}     
