@@ -39,3 +39,6 @@ for (var i = 0; i <= 3; i++) {
 for (let j = 0; j <= 3; j++) {
     console.log(j);
 }
+
+console.log(i);
+console.log(j); // ReferenceError: j is not defined
