@@ -59,7 +59,7 @@ function checkLuNum () {
            } else {
             reject("unlucky draw")
            }
-        }, 1000)
+        }, 5000)
     })
 }
 
