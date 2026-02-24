@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM and Browser</title>
+    </head>
+
+    <body>
+        <form id="solar-proposal-form">
+            <div class="form-group">
+                <label for="lead-name">Project Lead Name:</label>
+                <input type="text" id="lead-name">
+                <div class="error-msg" id="name-error" style="color: red;"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="region">Target Region:</label>
+                <select id="region">
+                    <option value="">-- Choose a Region --</option>
+                    <option value="sahel">Sahel Zone</option>
+                    <option value="sahara">Saharan Zone</option>
+                    <option value="sudanian">Sudanian Savanna</option>
+                </select>
+                <div class="error-msg" id="region-error" style="color: red;"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="power-kw">Estimated Power Need (kW):</label>
+                <input type="number" id="power-kw">
+                <div class="error-msg" id="power-error" style="color: red;"></div>
+            </div>
+
+            <button type="submit">Submit Proposal</button>
+        </form>
+
+        <h3 id="success-message" style="color: green;"></h3>
+        
+        
+        <script src="day16.js"></script>
+
+    </body>
+</html>
