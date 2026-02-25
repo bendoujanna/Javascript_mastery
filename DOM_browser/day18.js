@@ -1,13 +1,13 @@
-const myTasks = ["Sweep the floor", "Summative", "learn JS"];
-
-const stringTasks = JSON.stringify(myTasks);
-localStorage.setItem("dailyChores", stringTasks);
-
-
-const dataFromBrowser = localStorage.getItem("dailyChores");
-const restoredTasks = JSON.parse(dataFromBrowser);
-
-console.log(restoredTasks[0]);
+// const myTasks = ["Sweep the floor", "Summative", "learn JS"];
+// 
+// const stringTasks = JSON.stringify(myTasks);
+// localStorage.setItem("dailyChores", stringTasks);
+// 
+// 
+// const dataFromBrowser = localStorage.getItem("dailyChores");
+// const restoredTasks = JSON.parse(dataFromBrowser);
+// 
+// console.log(restoredTasks[0]);
 
 let tasks;
 
