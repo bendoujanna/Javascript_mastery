@@ -1,30 +1,41 @@
-// ES4 + features
+// object oriented programming (OOP) in JavaScript
 
-// messy code
-
-const apiResponse = {
-    requestId: "REQ-9948",
-    timestamp: "2026-03-01",
-    payload: {
-        userProfile: {
-            username: "code_ninja",
-            email: "ninja@dev.com",
-            theme: "dark_mode"
-        },
-        accessRights: ["read", "comment"]
+// MDN challenge
+// part 1
+class Shape {
+    constructor(name, sides, sideLength) {
+        this.name = name;
+        this.sides = sides;
+        this.sideLength = sideLength;
     }
-};
 
-const { username, email } = apiResponse.payload.userProfile;
-const { accessRights } = apiResponse.payload;
+    calcPerimeter() {
+        const perimeter = this.sides * this.sideLength;
+        console.log(`The perimeter of the ${this.name} is ${perimeter}`);
+    }
+}
 
-const updatedRights = [...accessRights, "admin_delete"];
+const square = new Shape("square", 4, 5);
+square.calcPerimeter(); 
 
-const cleanUser = {
-    username,
-    email,
-    permissions: updatedRights,
-    status: "Active"
-};
+const triangle = new Shape("triangle", 3, 3);
+triangle.calcPerimeter(); 
 
-console.log(cleanUser);
+// part 2
+class Square extends Shape {
+    
+    constructor(sideLength) {
+        super("square", 4, sideLength);
+    }
+
+    calcArea() {
+        const area = this.sideLength * this.sideLength;
+        console.log(`The area of the ${this.name} is ${area}`);
+    }
+}
+
+const mySquare = new Square(5);
+
+mySquare.calcPerimeter(); 
+
+mySquare.calcArea();      
