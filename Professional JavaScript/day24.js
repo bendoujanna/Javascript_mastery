@@ -27,3 +27,4 @@ syncBtn.addEventListener("click", async () => {
         console.log("Sync operation closed.");
     }
 });
+
