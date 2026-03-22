@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Professional JavaScript</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <section class="dashboard">
+            <h1>Expense Tracker Dashboard</h1>
+            <div id="expense-summary">
+                <h2>Expense Summary</h2>
+                <p>Total balance: $<span id="total-balance">0</span></p>
+                <p>Total Expenses: $<span id="total-expenses">0</span></p>
+                <p>Average Expense: $<span id="average-expense">0</span></p>
+            </div>
+            <div id="expense-list">
+                <h2>Expense List</h2>
+                <ul id="expenses"></ul>
+            </div>
+        </section>
+
+        <section class="add-expense">
+            <h2>Add New Expense/Income</h2>
+            <form id="expense-form">
+                <input type="text" id="expense-name" placeholder="Expense Name" required>
+                <input type ="text" id ="enpense-description" placeholder="Description">
+                <input type="number" id="expense-amount" placeholder="Amount" required>
+                <select id="expense-type" required>
+                    <option value="">Select Type</option>
+                    <option value="expense">Expense</option>
+                    <option value="income">Income</option>
+                </select>
+                <button type="submit">Add</button>
+            </form>
+        </section>
+            
+
+
+</html>
