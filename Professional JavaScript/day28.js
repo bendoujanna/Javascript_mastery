@@ -6,7 +6,6 @@ let transactions = [
 ];
 
 function saveData () {
-    JSON.stringify(transactions);
     localStorage.setItem("transactions", JSON.stringify(transactions));
 }
 function loadData () {
@@ -17,3 +16,26 @@ function loadData () {
         transactions = [];
     }
 }
+
+let transactionList = document.getElementById("expense-list");
+function renderList () {
+    transactionList.innerHTML = "";
+    transactions.forEach(transaction => {
+        let listItem = document.createElement("li");
+        if (transaction.amount < 0) {
+            transaction.type = "expense";
+        } else {
+            transaction.type = "income";
+        }
+        if (transaction.type === "expense") {
+            listItem.style.color = "red";
+        } else {
+            listItem.style.color = "green";
+        }
+        listItem.textContent = `${transaction.description}: $${transaction.amount})`;
+        transactionList.appendChild(listItem);
+    });
+}
+
+loadData();
+renderList();
